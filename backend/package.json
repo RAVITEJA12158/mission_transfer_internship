@@ -1,0 +1,25 @@
+{
+  "name": "uav-backend",
+  "version": "1.0.0",
+  "description": "UAV flight data backend (Express + PostgreSQL + local log storage)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "db:init": "node scripts/init-db.js",
+    "test": "node scripts/smoke-test.js",
+    "test:adversarial": "node scripts/adversarial-test.js"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "multer": "^2.0.2",
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

@@ -1,0 +1,4 @@
+pymavlink>=2.4.41
+requests>=2.31
+requests-toolbelt>=1.0
+python-dotenv>=1.0

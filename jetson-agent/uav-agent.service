@@ -1,0 +1,15 @@
+[Unit]
+Description=UAV data collection agent
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=jetson
+WorkingDirectory=/home/jetson/uav-system/jetson-agent
+ExecStart=/home/jetson/uav-system/jetson-agent/.venv/bin/python app.py
+Restart=always
+RestartSec=5
+SupplementaryGroups=dialout
+
+[Install]
+WantedBy=multi-user.target
